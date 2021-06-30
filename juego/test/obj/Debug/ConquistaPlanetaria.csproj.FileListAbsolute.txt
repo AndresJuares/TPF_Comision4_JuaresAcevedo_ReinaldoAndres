@@ -1,0 +1,44 @@
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\test.exe.config
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\test.exe
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\test.pdb
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Direct2D1.dll
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Direct3D11.dll
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.dll
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.DXGI.dll
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Mathematics.dll
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.pdb
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Direct2D1.pdb
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Direct2D1.xml
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Direct3D11.pdb
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Direct3D11.xml
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.DXGI.pdb
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.DXGI.xml
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Mathematics.pdb
+C:\Users\Andres Juares\Desktop\juego\test\bin\Debug\SharpDX.Mathematics.xml
+C:\Users\Andres Juares\Desktop\juego\test\obj\Debug\ConquistaPlanetaria.csprojResolveAssemblyReference.cache
+C:\Users\Andres Juares\Desktop\juego\test\obj\Debug\test.juego.Form1.resources
+C:\Users\Andres Juares\Desktop\juego\test\obj\Debug\ConquistaPlanetaria.csproj.GenerateResource.Cache
+C:\Users\Andres Juares\Desktop\juego\test\obj\Debug\test.exe
+C:\Users\Andres Juares\Desktop\juego\test\obj\Debug\test.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\test.exe.config
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\test.exe
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\test.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Direct2D1.dll
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Direct3D11.dll
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.dll
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.DXGI.dll
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Mathematics.dll
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Direct2D1.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Direct2D1.xml
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Direct3D11.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Direct3D11.xml
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.DXGI.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.DXGI.xml
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Mathematics.pdb
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\bin\Debug\SharpDX.Mathematics.xml
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\ConquistaPlanetaria.csprojResolveAssemblyReference.cache
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\test.juego.Form1.resources
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\ConquistaPlanetaria.csproj.GenerateResource.Cache
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\test.exe
+C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\test.pdb
