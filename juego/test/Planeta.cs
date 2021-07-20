@@ -87,25 +87,42 @@ namespace DeepSpace
             planetRenderer.Dispose();
         }
         
+        
+        //METODO QUE DEVUELVE SI ES PLANETA DEL BOT (SI PERTENECE, RETORNE TRUE)
         public bool EsPlanetaDeLaIA()
         {
-        	return team==2;
+        	if(team==2){
+        		return true;
+        	}
+        	return false;
         }
         
+        //METODO QUE RETORNA SI ES PLANETA DEL JUGADOR (SI PERTENECE, RETORNA TRUE)
         public bool EsPlanetaDelJugador()
         {
-        	return team==1;
+        	if(team==1){
+        		return true;
+        	}
+        	return false;
         }
         
+        
+        //METODO QUE RETORNA SI EL PLANETA ES NEUTRO (SI PERTENECE, RETORNA TRUE)
         public bool EsPlanetaNeutral()
         {
-        	return team==0;
+        	if(team==0){
+        		return true;
+        	}
+        	return false;
         }
         
+        //METODO QUE RETORNA LA CANTIDAD DE POBLACION QUE TIENE
         public int Poblacion()
         {
         	return (int) this.population;
         }
+        
+         
     }
 }
 
