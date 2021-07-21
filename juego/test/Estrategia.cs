@@ -40,10 +40,17 @@ namespace DeepSpace
 			return null;
 		}
 		
+		//SI EL PLANETA DE LA IA ES UNA HOJA ENTONCES DEBO HACER EL RECORRIDO RECURSIVO
+			public bool SaberSiEsHoja(ArbolGeneral<Planeta> Planeta1){
+			if(Planeta1.getDatoRaiz().EsPlanetaDeLaIA()){
+				return true;
+				}
+			return false;
+				
+			}
+		
 		//CREO UN METODO PARA SABER QUE PLANETA ME TOCO EN EL ARBOL. INICIA SIEMPRE DESDE LA RAIZ QUE ES EL MEDIO
 		private ArbolGeneral<Planeta> ObtenerPlanetaCercano(ArbolGeneral<Planeta> arbol){
-			
-			//SI EL PLANETA DE LA IA ES UNA HOJA ENTONCES DEBO HACER EL RECORRIDO RECURSIVO
 			
 			
 			
