@@ -5,10 +5,18 @@ namespace DeepSpace
     {
         private Estrategia est;
         private float acc;
+        
+        
         public IA(Game game)
             : base(game)
         {
             this.est = new Estrategia();
+            
+        }
+        
+        //METODO PARA RETORNAR LA ESTRATEGIA CREADA 
+        public Estrategia GetEstrategia(){
+        	return this.est;
         }
 
         public override void Update(float delta)

@@ -17,12 +17,19 @@ namespace DeepSpace
         public Brushes brushes;
         public Scene scene;
         public int level;
-        public Game(WindowRenderTarget target)
-        {
+        
+        
+        
+        public Game(WindowRenderTarget target){
+        	
             this.target = target;
             this.factoryWrite = new SharpDX.DirectWrite.Factory();
             this.brushes = new Brushes(this);
             this.scene = new MenuScene(this);
+            IA Inteligencia2= new IA(this);
+            
+            
+            
         }
 
         public void Update(float delta) 

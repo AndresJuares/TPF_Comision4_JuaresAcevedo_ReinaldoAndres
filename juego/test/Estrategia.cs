@@ -6,11 +6,12 @@ namespace DeepSpace
 
 	class Estrategia
 	{
-		
+		public ArbolGeneral<Planeta> ArbolConEstrategia=null;
 		
 		public String Consulta1( ArbolGeneral<Planeta> arbol)
 		{
-			return "Implementar";
+			this.ArbolConEstrategia=arbol;
+			return "El planeta IA tiene "+ this.ObtenerPlanetaCercano(ArbolConEstrategia).getDatoRaiz().Poblacion().ToString()+" de poblacion";
 		}
 
 
@@ -41,14 +42,13 @@ namespace DeepSpace
 		}
 		
 		//SI EL PLANETA DE LA IA ES UNA HOJA ENTONCES DEBO HACER EL RECORRIDO RECURSIVO
-			public bool SaberSiEsHoja(ArbolGeneral<Planeta> Planeta1){
+		public bool SaberSiEsHoja(ArbolGeneral<Planeta> Planeta1){
 			if(Planeta1.getDatoRaiz().EsPlanetaDeLaIA()){
 				return true;
-				}
-			return false;
-				
 			}
-		
+			return false;
+					
+		}
 		//CREO UN METODO PARA SABER QUE PLANETA ME TOCO EN EL ARBOL. INICIA SIEMPRE DESDE LA RAIZ QUE ES EL MEDIO
 		private ArbolGeneral<Planeta> ObtenerPlanetaCercano(ArbolGeneral<Planeta> arbol){
 			
@@ -72,13 +72,12 @@ namespace DeepSpace
 					//SI ES VERDADERO ME RETORNA TRUE.
 					return planeta;
 				}
-				//PARA CADA PLANETA, LO AGREGO A LA COLA PARA QUE HAGA EL MISMO METODO HASTA ENCONTRAR EL PLANETA.
+			
+			//PARA CADA PLANETA, LO AGREGO A LA COLA PARA QUE HAGA EL MISMO METODO HASTA ENCONTRAR EL PLANETA.
 				foreach(ArbolGeneral<Planeta> PlanetaHijo in planeta.getHijos()){
 					cola.encolar(PlanetaHijo);
 				}
-				
 			}
-			
 			//EN CASO DE QUE NO SE ENCUENTRE EL PLANETA, RETORNARA FALSE.
 			return null;
 			

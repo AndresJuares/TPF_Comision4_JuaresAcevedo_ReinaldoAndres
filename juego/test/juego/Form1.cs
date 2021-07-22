@@ -61,6 +61,9 @@ namespace DeepSpace
             target = new WindowRenderTarget(factory, renderProp, winProp);
 
             game = new Game(target);
+            
+            //CREO LA INTELIGENCIA ARTIFICIAL
+            
 
             //avoid artifacts
             this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.Opaque, true);
@@ -126,5 +129,6 @@ namespace DeepSpace
         {
             game.OnKeyPress(e);
         }
+        
     }
 }
