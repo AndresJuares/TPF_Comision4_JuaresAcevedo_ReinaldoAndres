@@ -42,3 +42,25 @@ C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\ob
 C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\ConquistaPlanetaria.csproj.GenerateResource.Cache
 C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\test.exe
 C:\Universidad\Complejidad de Algoritmos\Trabajo Final Complejidad\juego\test\obj\Debug\test.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\test.exe.config
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\test.exe
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\test.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Direct2D1.dll
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Direct3D11.dll
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.dll
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.DXGI.dll
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Mathematics.dll
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Direct2D1.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Direct2D1.xml
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Direct3D11.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Direct3D11.xml
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.DXGI.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.DXGI.xml
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Mathematics.pdb
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\bin\Debug\SharpDX.Mathematics.xml
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\obj\Debug\ConquistaPlanetaria.csprojResolveAssemblyReference.cache
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\obj\Debug\test.juego.Form1.resources
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\obj\Debug\ConquistaPlanetaria.csproj.GenerateResource.Cache
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\obj\Debug\test.exe
+C:\Users\PC\Desktop\Complejidad2021Git\TPF_Comision4_JuaresAcevedo_ReinaldoAndres\juego\test\obj\Debug\test.pdb

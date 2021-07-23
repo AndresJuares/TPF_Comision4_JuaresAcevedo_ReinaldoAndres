@@ -10,14 +10,55 @@ namespace DeepSpace
 		
 		public String Consulta1( ArbolGeneral<Planeta> arbol)
 		{
-			this.ArbolConEstrategia=arbol;
-			return "El planeta IA tiene "+ this.ObtenerPlanetaCercano(ArbolConEstrategia).getDatoRaiz().Poblacion().ToString()+" de poblacion";
+			//this.ArbolConEstrategia=arbol;
+			//return "El planeta IA tiene "+ this.ObtenerPlanetaCercano(ArbolConEstrategia).getDatoRaiz().Poblacion().ToString()+" de poblacion";
+		
+			//METODO PARA SABER CUAL ES EL CAMINO MAS LARGO DE LA RAIZ A UNA HOJA
+			Cola<ArbolGeneral<Planeta>> cola=new Cola<ArbolGeneral<Planeta>>();
+			cola.encolar(arbol);
+			int contador=0;
+			while(!cola.esVacia()){
+				ArbolGeneral<Planeta> planeta1=cola.desencolar();
+				int count=planeta1.getHijos().Count;
+				count--;
+				if(count==0){
+					contador++;
+				}
+				
+				
+				
+				foreach(ArbolGeneral<Planeta> Hijo in planeta1.getHijos()){
+					
+					cola.encolar(Hijo);
+				}
+				
+			}
+			return "El camino mas largo entre el planeta central y una hoja es "+ contador;
+		
+			
+		
 		}
 
 
 		public String Consulta2( ArbolGeneral<Planeta> arbol)
 		{
-			return "Implementar";
+			//METODO PARA RECORRER POR NIVELES E IMPRIMIR
+			Cola<ArbolGeneral<Planeta>> cola=new Cola<ArbolGeneral<Planeta>>();
+			cola.encolar(arbol);
+			int contador =0;
+			while(!cola.esVacia()){
+				ArbolGeneral<Planeta> planeta1=cola.desencolar();
+				if(planeta1.esHoja()==true){
+					if(planeta1.getDatoRaiz().Poblacion()>3){
+						contador++;
+					}
+				}
+			
+				foreach(ArbolGeneral<Planeta> Hijo in planeta1.getHijos()){
+					cola.encolar(Hijo);
+				}
+			}
+			return "Los ultimos planetas que poseen poblacion mayor a 3 son "+contador;
 		}
 
 
