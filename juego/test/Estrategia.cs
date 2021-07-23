@@ -10,32 +10,32 @@ namespace DeepSpace
 		
 		public String Consulta1( ArbolGeneral<Planeta> arbol)
 		{
-			//this.ArbolConEstrategia=arbol;
-			//return "El planeta IA tiene "+ this.ObtenerPlanetaCercano(ArbolConEstrategia).getDatoRaiz().Poblacion().ToString()+" de poblacion";
+			
 		
 			//METODO PARA SABER CUAL ES EL CAMINO MAS LARGO DE LA RAIZ A UNA HOJA
 			Cola<ArbolGeneral<Planeta>> cola=new Cola<ArbolGeneral<Planeta>>();
 			cola.encolar(arbol);
-			int contador=0;
+			int cantnivel=0;
+			int nivel=-1;
 			while(!cola.esVacia()){
-				ArbolGeneral<Planeta> planeta1=cola.desencolar();
-				int count=planeta1.getHijos().Count;
-				count--;
-				if(count==0){
-					contador++;
-				}
-				
-				
-				
-				foreach(ArbolGeneral<Planeta> Hijo in planeta1.getHijos()){
+				cantnivel=cola.cantidad();
+				while(cantnivel-- >0){
+					ArbolGeneral<Planeta> planeta1=cola.desencolar();
+					foreach(ArbolGeneral<Planeta> hijo in planeta1.getHijos()){
+						cola.encolar(hijo);	
 					
-					cola.encolar(Hijo);
+					}
+					
+					
 				}
+				nivel++;
+				
 				
 			}
-			return "El camino mas largo entre el planeta central y una hoja es "+ contador;
-		
+			return"El camino mas largo hasta una hoja es "+nivel;	
 			
+			
+				
 		
 		}
 
