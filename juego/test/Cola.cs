@@ -28,7 +28,7 @@ namespace DeepSpace
 			return this.datos.Count == 0;
 		}
 		
-		
+		//METODO PARA SABER LA CANTIDAD DE DATOS 
 		public int cantidad(){
 			return this.datos.Count;
 		}
