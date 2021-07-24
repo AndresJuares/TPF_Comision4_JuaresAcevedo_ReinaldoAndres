@@ -26,7 +26,7 @@ namespace DeepSpace
             this.factoryWrite = new SharpDX.DirectWrite.Factory();
             this.brushes = new Brushes(this);
             this.scene = new MenuScene(this);
-            IA Inteligencia2= new IA(this);
+     		
             
             
             

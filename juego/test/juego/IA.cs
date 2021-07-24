@@ -12,6 +12,7 @@ namespace DeepSpace
         {
             this.est = new Estrategia();
             
+            
         }
         
         //METODO PARA RETORNAR LA ESTRATEGIA CREADA 

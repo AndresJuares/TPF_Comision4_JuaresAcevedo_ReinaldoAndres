@@ -6,7 +6,7 @@ namespace DeepSpace
 
 	class Estrategia
 	{
-		public ArbolGeneral<Planeta> ArbolConEstrategia=null;
+		
 		
 		public String Consulta1( ArbolGeneral<Planeta> arbol)
 		{
@@ -18,6 +18,7 @@ namespace DeepSpace
 			int cantnivel=0;
 			int nivel=-1;
 			while(!cola.esVacia()){
+				//CREO EL CONTADOR PARA QUE ME TIRE EL CAMINO MAS LARGO
 				cantnivel=cola.cantidad();
 				while(cantnivel-->0){
 					ArbolGeneral<Planeta> planeta1=cola.desencolar();
@@ -32,7 +33,7 @@ namespace DeepSpace
 				
 				
 			}
-			return"1) El camino mas largo hasta una hoja es: "+nivel;	
+			return"1) El camino mas largo hasta una hoja es: "+nivel;
 			
 			
 				
@@ -48,7 +49,9 @@ namespace DeepSpace
 			int contador =0;
 			while(!cola.esVacia()){
 				ArbolGeneral<Planeta> planeta1=cola.desencolar();
+				//AL DESENCOLAR, PREGUNTO SI ESE PLANETA ES HOJA
 				if(planeta1.esHoja()==true){
+					//SI ES HOJA,PREGUNTO SI LA POBLACION ES MAYOR A 3
 					if(planeta1.getDatoRaiz().Poblacion()>3){
 						contador++;
 					}
@@ -108,15 +111,60 @@ namespace DeepSpace
 			return Respuesta;
 		}
 		
+		
+		//CALCULO EL MOVIMIENTO PARA LA IA
 		public Movimiento CalcularMovimiento(ArbolGeneral<Planeta> arbol)
 		{
 			// SI EL PLANETA ES VACIO, LLAMO A OBTENER PLANETA MAS CERCANO
 			//PARA QUE ME RETORNE EL PLANETA QUE PERTENECE A LA IA
-			ArbolGeneral<Planeta> Pl= null;
-			if(Pl==null){
-				Pl=ObtenerPlanetaCercano(arbol);
-			}
+			ArbolGeneral<Planeta> planetaIA=null;
 			
+			
+			//SI EL PLANETA ES VACIO, OBTENGO EL PLANETA QUE PERTENECE A LA IA
+			if(planetaIA==null){
+				planetaIA=ObtenerPlanetaCercano(arbol);
+				if(planetaIA.esHoja()==true){
+					
+				}
+			}
+			//PREGUNTO SI TENGO QUE TRAER LAS TROPAS
+			if(TengoQueReagrupar(planetaIA)){
+				//EN CASO DE QUE SEA VERDADERO, RETORNO UN NUEVO MOVIMIENTO 
+				Cola<ArbolGeneral<Planeta>> cola1=new Cola<ArbolGeneral<Planeta>>();
+				while(!cola1.esVacia()){
+					ArbolGeneral<Planeta>planeta1=cola1.desencolar();
+					foreach(ArbolGeneral<Planeta> Hijo in planeta1.getHijos()){
+						cola1.encolar(Hijo);
+						new Movimiento(planetaIA.getDatoRaiz(),Hijo.getDatoRaiz());
+					}
+				}
+				return new Movimiento(arbol.getDatoRaiz(),planetaIA.getDatoRaiz());
+			}
+			else{
+				
+				//EN CASO DE QUE SEA FALSO, CONQUISTO EL PLANETA
+				//NEW MOVIMIENTO(ULTIMO PLANETA CONQUISTADO,PLANETANOCONQUISTADO)
+				
+				Cola<ArbolGeneral<Planeta>>cola2=new Cola<ArbolGeneral<Planeta>>();
+				cola2.encolar(planetaIA);
+				while(!cola2.esVacia()){
+					ArbolGeneral<Planeta> planeta2=cola2.desencolar();
+					foreach(ArbolGeneral<Planeta> Adyacentes in planeta2.getHijos()){
+						cola2.encolar(Adyacentes);
+						if(Adyacentes==planetaIA){
+							Movimiento mov=new Movimiento(Adyacentes.getDatoRaiz(),planetaIA.getDatoRaiz());
+							
+							break;
+						}
+						if(Adyacentes.getDatoRaiz().EsPlanetaNeutral()==true){
+							Movimiento movimiento=new Movimiento(planetaIA.getDatoRaiz(),Adyacentes.getDatoRaiz());
+						}
+						new Movimiento(planeta2.getDatoRaiz(),Adyacentes.getDatoRaiz());
+						
+					}
+					
+				}
+			}
 			
 			
 			//CASO CONTRARIO
@@ -126,7 +174,7 @@ namespace DeepSpace
 		
 		//SI EL PLANETA DE LA IA ES UNA HOJA ENTONCES DEBO HACER EL RECORRIDO RECURSIVO
 		public bool SaberSiEsHoja(ArbolGeneral<Planeta> Planeta1){
-			if(Planeta1.getDatoRaiz().EsPlanetaDeLaIA()){
+			if(Planeta1.getHijos()==null){
 				return true;
 			}
 			return false;
@@ -163,6 +211,20 @@ namespace DeepSpace
 			}
 			//EN CASO DE QUE NO SE ENCUENTRE EL PLANETA, RETORNARA FALSE.
 			return null;
+			
+		}
+		
+		//METODO PARA REAGRUPAR LAS TROPAS
+		private bool TengoQueReagrupar(ArbolGeneral<Planeta> arbol){
+			if(!arbol.getDatoRaiz().EsPlanetaDeLaIA()){
+				return false;
+			}
+			bool EstadoActual=true;
+			foreach(ArbolGeneral<Planeta> Adyacentes in arbol.getHijos()){
+				EstadoActual=EstadoActual & TengoQueReagrupar(Adyacentes);
+			}
+			return EstadoActual;
+			
 			
 		}
 	}
