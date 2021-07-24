@@ -17,3 +17,9 @@ Se intento crear el metodo calcular movimiento mediante if para saber si era una
 Se crearan los diagramas UML y se hará el informe correspondiente.
 
 La idea está en mente ya que, si el nodo es nulo(osea si es neutro), se busca al planeta que posea la IA. Luego se preguntará si ese planeta es una hoja o no, en caso de que lo sea, se debe aplicar caso recursivo para poder llegar desde la raiz hasta el planeta IA, caso contrario se recorrerán y se tomarán los hijos para conquistarlos y cada uno que se agregue, preguntará si es la raiz. En caso de que sea verdadero se reagruparan las tropas para así conquistar la raiz que es el objetivo.
+
+
+
+
+
+Se implementaron los metodos para calcular el movimiento, de modo que no se pudo completar cuando el planeta IA es una hoja o si esta entre medio para volver a la raiz. Por otra parte, se pudo implementar con éxito que recorra los planetas adyacentes para asi poder ser conquistados, pero al retorno solo regresa de un solo planeta y no todos sus adyacentes.
