@@ -19,7 +19,7 @@ namespace DeepSpace
 			int nivel=-1;
 			while(!cola.esVacia()){
 				cantnivel=cola.cantidad();
-				while(cantnivel-- >0){
+				while(cantnivel-->0){
 					ArbolGeneral<Planeta> planeta1=cola.desencolar();
 					foreach(ArbolGeneral<Planeta> hijo in planeta1.getHijos()){
 						cola.encolar(hijo);	
@@ -32,7 +32,7 @@ namespace DeepSpace
 				
 				
 			}
-			return"El camino mas largo hasta una hoja es "+nivel;	
+			return"1) El camino mas largo hasta una hoja es: "+nivel;	
 			
 			
 				
@@ -58,13 +58,54 @@ namespace DeepSpace
 					cola.encolar(Hijo);
 				}
 			}
-			return "Los ultimos planetas que poseen poblacion mayor a 3 son "+contador;
+			return "2) Los ultimos planetas que poseen poblacion mayor a 3 son: "+contador;
 		}
 
 
 		public String Consulta3( ArbolGeneral<Planeta> arbol)
 		{
-			return "Implementar";
+			
+			//PRIMERO SE BUSCA EL PROMEDIO DE LA POBLACION
+			
+			long poblacionTotal=0;
+			int TotalPlanetas=0;
+			Cola<ArbolGeneral<Planeta>> cola=new Cola<ArbolGeneral<Planeta>>();
+			cola.encolar(arbol);
+			while(!cola.esVacia()){
+				int planetasNivel=cola.cantidad();
+				while(planetasNivel-->0){
+					ArbolGeneral<Planeta> planeta=cola.desencolar();
+					poblacionTotal+=(long)planeta.getDatoRaiz().Poblacion();
+					TotalPlanetas++;
+					foreach(ArbolGeneral<Planeta> Hijo in planeta.getHijos()){
+						cola.encolar(Hijo);
+					}
+				}
+			}
+			
+			//LUEGO SACO EL PROMEDIO DE CADA NIVEL
+			double promedio=(double)poblacionTotal/TotalPlanetas;
+			String Respuesta="3) Población mayor a la cantidad promedio del arbol:\n";
+			int PlanetasmayorpromedioNivel,nivel=0;
+			Cola<ArbolGeneral<Planeta>> cola2=new Cola<ArbolGeneral<Planeta>>();
+			cola2.encolar(arbol);
+			while(!cola2.esVacia()){
+				int planetasNivel=cola2.cantidad();
+				PlanetasmayorpromedioNivel=0;
+				while(planetasNivel-->0){
+					ArbolGeneral<Planeta> planeta2=cola2.desencolar();
+					if(planeta2.getDatoRaiz().Poblacion()>promedio){
+						PlanetasmayorpromedioNivel++;
+					}
+					foreach(ArbolGeneral<Planeta> Hijo2 in planeta2.getHijos()){
+						cola2.encolar(Hijo2);
+					}
+				}
+				Respuesta+=" NIVEL"+nivel +": "+ PlanetasmayorpromedioNivel;
+				nivel++;
+			}
+			
+			return Respuesta;
 		}
 		
 		public Movimiento CalcularMovimiento(ArbolGeneral<Planeta> arbol)
