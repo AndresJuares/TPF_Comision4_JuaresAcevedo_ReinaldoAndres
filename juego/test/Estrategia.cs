@@ -117,28 +117,41 @@ namespace DeepSpace
 		{
 			// SI EL PLANETA ES VACIO, LLAMO A OBTENER PLANETA MAS CERCANO
 			//PARA QUE ME RETORNE EL PLANETA QUE PERTENECE A LA IA
-			ArbolGeneral<Planeta> planetaIA=null;
-			
+			ArbolGeneral<Planeta> planetaIA=arbol;
+			planetaIA=ObtenerPlanetaCercano(arbol);
 			
 			//SI EL PLANETA ES VACIO, OBTENGO EL PLANETA QUE PERTENECE A LA IA
-			if(planetaIA==null){
-				planetaIA=ObtenerPlanetaCercano(arbol);
-				if(planetaIA.esHoja()==true){
+			if(planetaIA.esHoja()==true){
+				
+				List<ArbolGeneral<Planeta>> lista=new List<ArbolGeneral<Planeta>>();
+				
+				Movimiento mov=new Movimiento(arbol.getDatoRaiz(),planetaIA.getDatoRaiz());
 					
-				}
+					//excepcion
+				
 			}
 			//PREGUNTO SI TENGO QUE TRAER LAS TROPAS
 			if(TengoQueReagrupar(planetaIA)){
 				//EN CASO DE QUE SEA VERDADERO, RETORNO UN NUEVO MOVIMIENTO 
 				Cola<ArbolGeneral<Planeta>> cola1=new Cola<ArbolGeneral<Planeta>>();
+				cola1.encolar(planetaIA);
+				List<Movimiento> movimiento=new List<Movimiento>();
 				while(!cola1.esVacia()){
 					ArbolGeneral<Planeta>planeta1=cola1.desencolar();
+					
 					foreach(ArbolGeneral<Planeta> Hijo in planeta1.getHijos()){
+						if(Hijo.getDatoRaiz().EsPlanetaDeLaIA()==true){
+							Movimiento mov= new Movimiento(Hijo.getDatoRaiz(),planeta1.getDatoRaiz());
+							movimiento.Add(mov);
+						}
 						cola1.encolar(Hijo);
-						new Movimiento(planetaIA.getDatoRaiz(),Hijo.getDatoRaiz());
 					}
 				}
-				return new Movimiento(arbol.getDatoRaiz(),planetaIA.getDatoRaiz());
+				
+				foreach(Movimiento Planetas in movimiento){
+					return Planetas;
+				}
+				
 			}
 			else{
 				
@@ -147,23 +160,29 @@ namespace DeepSpace
 				
 				Cola<ArbolGeneral<Planeta>>cola2=new Cola<ArbolGeneral<Planeta>>();
 				cola2.encolar(planetaIA);
+				List<Movimiento>movimiento=new List<Movimiento>();
+				
+				
+				//CREO UN CONTADOR PARA QUE PUEDA LLEGAR A LAS HOJAS
+				int cantnivel=0;
 				while(!cola2.esVacia()){
-					ArbolGeneral<Planeta> planeta2=cola2.desencolar();
-					foreach(ArbolGeneral<Planeta> Adyacentes in planeta2.getHijos()){
-						cola2.encolar(Adyacentes);
-						if(Adyacentes==planetaIA){
-							Movimiento mov=new Movimiento(Adyacentes.getDatoRaiz(),planetaIA.getDatoRaiz());
-							
-							break;
+					cantnivel=cola2.cantidad();
+					while(cantnivel-->0){
+						ArbolGeneral<Planeta> planeta2=cola2.desencolar();
+						foreach(ArbolGeneral<Planeta> Adyacentes in planeta2.getHijos()){
+							if(Adyacentes.getDatoRaiz().EsPlanetaNeutral()==true){
+							Movimiento mov= new Movimiento(planeta2.getDatoRaiz(),Adyacentes.getDatoRaiz());
+								movimiento.Add(mov);
+							}
+							cola2.encolar(Adyacentes);
 						}
-						if(Adyacentes.getDatoRaiz().EsPlanetaNeutral()==true){
-							Movimiento movimiento=new Movimiento(planetaIA.getDatoRaiz(),Adyacentes.getDatoRaiz());
-						}
-						new Movimiento(planeta2.getDatoRaiz(),Adyacentes.getDatoRaiz());
-						
 					}
-					
 				}
+				
+				foreach(Movimiento Planetas in movimiento){
+					return Planetas;
+				}
+				
 			}
 			
 			
@@ -227,5 +246,15 @@ namespace DeepSpace
 			
 			
 		}
+		
+		
+		//METODO RECURSIVO PARA PLANETAS
+		/*public Planeta PlanetaPreorden(ArbolGeneral<Planeta> arbol,List<ArbolGeneral<Planeta>> lista){
+			lista.Add(arbol.getDatoRaiz());
+			if(arbol.getHijos()!=null){
+				PlanetaPreorden(arbol,arbol.getHijos());
+			}
+			return arbol.getDatoRaiz();
+		}*/
 	}
 }

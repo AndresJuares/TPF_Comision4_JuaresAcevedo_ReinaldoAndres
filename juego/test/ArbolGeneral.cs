@@ -39,6 +39,7 @@ namespace DeepSpace
 	
 		
 		public int nivel(T dato) {
+			
 			return 0;
 		}
 	
